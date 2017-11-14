@@ -1,0 +1,13 @@
+<h1>Awesome Rails Wikinimous</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+  <li>
+    <%= article.title %>
+    <%= link_to "View", article_path(article) %>
+    <%= link_to "Edit", edit_article_path(article) %>
+    <%= link_to "View", article_path(article), method: :delete %>
+  </li>
+  <% end %>
+</ul>
+<p><%= link_to "Create a new article", new_article_path %></p
